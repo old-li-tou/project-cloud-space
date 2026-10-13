@@ -1,0 +1,6 @@
+interface:
+  display_name: "项目瘦身"
+  short_description: "分析项目磁盘占用，给出分档瘦身、归档打包与恢复建议，默认只分析不修改文件"
+  default_prompt: "使用 $project-slimming 分析当前项目的磁盘占用，给出分档瘦身与打包建议，先只分析不改动文件。"
+policy:
+  allow_implicit_invocation: false

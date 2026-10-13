@@ -20,4 +20,6 @@ The app must remain open for automatic uploading. It supports serial queues, bou
 
 Agent commands include `status`, `cloud-projects`, `backup-indexes` and `recover-project`. See the [Chinese documentation](README.md) for installation, recovery and operational details.
 
+An optional [project-slimming skill](skills/project-slimming/SKILL.md) provides project disk analysis, tiered cleanup proposals and archive grouping/size recommendations. Copy its folder into your Codex skills directory and invoke `$project-slimming` in the target project. It defaults to read-only analysis; packaging, moving and deleting follow the user's approved scope. The skill and its reports are primarily in Chinese. See the [installation and invocation instructions](README.md#可选让-agent-分析项目瘦身).
+
 Source: MIT, copyright 2026 old-li-tou. Dependencies retain their own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md). This is an independent project, not an official Baidu product.
