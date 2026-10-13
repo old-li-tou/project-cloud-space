@@ -1,0 +1,24 @@
+# Environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.state/
+.env
+.env.*
+!config.example.json
+credentials*
+config.json
+*.dpapi
+*.log
+*.jsonl*
+*.lnk
+云空间/
+云空间恢复/
+.云端记录/
+.云空间配置.json
+recovery/
+build/
+dist/
+*.egg-info/

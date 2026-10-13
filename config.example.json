@@ -1,0 +1,6 @@
+{
+  "note": "示例只解释字段；程序通过授权窗口写入 Windows 用户加密存储，不读取此示例文件。",
+  "client_id": "YOUR_BAIDU_APP_KEY",
+  "client_secret": "YOUR_BAIDU_SECRET_KEY",
+  "authorization_code": "ONE_TIME_CODE_FROM_BAIDU"
+}
