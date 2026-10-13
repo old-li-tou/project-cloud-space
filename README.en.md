@@ -6,6 +6,25 @@ Drag files into a project's `云空间` folder. The app uploads them sequentiall
 
 **Archiving removes the local originals after verification. Start with disposable test files. Data and indexes in the same Netdisk account are not independent backups.**
 
+## Real-world example: 23.77 GiB to 5.58 GiB locally
+
+On 2026-10-13, a personal development project containing firmware, server and hardware-test workspaces used the optional `project-slimming` skill to propose a cleanup. The user approved the actions before execution.
+
+| Metric | Before | After |
+|---|---:|---:|
+| Local project logical file size | **~23.77 GiB** | **~5.58 GiB** |
+
+This run reduced local logical file size by approximately **76.5%**:
+
+- **Direct cleanup:** 18,260 Python cache and selected host-test output files, about **200.64 MiB**. Corresponding source files were present; caches can grow back.
+- **Archive and release:** duplicate dependencies were consolidated into two distinct snapshots, and historical builds were grouped by experiment. **12 independent ZIP files totaled ~1.56 GiB**. After verification, 33 directories containing 241,456 original files (~18.01 GiB) were released. This archive batch saved **~17.99 GiB net**, accounting for retained local manifests and verification materials.
+
+Source code, Git history, uncommitted tracked changes, primary development dependencies, the server environment, and the recordings and test evidence excluded from this batch were retained. Historical workspaces need their dependency snapshots restored before rebuilding.
+
+A pilot archive was uploaded, restored and checked against all **52 member hashes** before the full batch. All 12 production archives passed local member verification, full cloud readback and index verification before originals were released. HEAD and tracked content were unchanged across the 24 repositories checked for that batch. Recovery mappings and instructions were retained locally.
+
+These anonymized figures come from one real session and its local verification records. They measure logical file sizes, not physical disk allocation or a guaranteed saving. No full-project restore drill, application runtime test or historical environment rebuild was performed. The Agent handled deduplication, packaging and approved cleanup outside the watched folder; the app handled uploads, readback, indexes and release of the files it managed.
+
 ## Requirements and quick start
 
 - Windows 10/11 x64, Python 3.12.
