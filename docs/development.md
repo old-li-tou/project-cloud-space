@@ -16,6 +16,10 @@
 
 真实上传/校验/恢复测试是显式操作：
 
+GitHub Actions 的 `Windows offline tests` 在 push、pull request 或手动触发时运行，使用 Windows 和 Python 3.12，依次安装依赖、执行 pip check、语法检查及上述离线测试。它不配置百度凭据，也不运行真实网盘验收脚本；首次云端运行结果以仓库 Actions 页面为准。
+
+真实网盘验收命令：
+
 ```powershell
 .\.venv\Scripts\python.exe tests/integration_roundtrip.py --live
 ```

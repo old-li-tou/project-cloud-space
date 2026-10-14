@@ -65,6 +65,8 @@
 
 详见[使用说明](docs/usage.md)、[Agent 接口](docs/agent.md)、[开发和验证](docs/development.md)。
 
+在另一台电脑上验证安装与授权时，可按[新电脑验收清单](docs/fresh-computer-test.md)逐项操作。
+
 ## 可选：让 Agent 分析项目瘦身
 
 源码附带 [project-slimming 技能](skills/project-slimming/SKILL.md)，可以独立使用，也可配合项目云空间。它会分析保留、删除和归档候选，给出低影响、推荐、激进方案，并根据文件分布、恢复需求、传输成本和临时空间建议打包大小与分组；不会强制统一包大小或凑瘦身比例。
