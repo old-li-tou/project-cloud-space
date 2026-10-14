@@ -55,4 +55,8 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as exc:
+        print(json.dumps({'pass': False, 'error': c.safe_error(exc)}, ensure_ascii=False))
+        sys.exit(1)

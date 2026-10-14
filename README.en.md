@@ -27,6 +27,8 @@ These anonymized figures come from one real session and its local verification r
 
 ## Requirements and quick start
 
+**Newly created applications have not been validated.** The 2026-10-14 fresh-computer acceptance used an existing Baidu application and verified archives under `/项目云空间/` at the Netdisk root. The tester reported a Baidu notice that new applications default to an application-specific directory, but no new-application comparison was completed; consult your Baidu console for the applicable permissions. This version uses a fixed `/项目云空间/` root and does not yet support applications restricted to their own directory. Such applications may be unable to archive with this release. Start with disposable test files, and do not manually relocate existing cloud data or indexes.
+
 - Windows 10/11 x64, Python 3.12.
 - Your own Baidu Netdisk developer application and account authorization. API eligibility and quotas are controlled by Baidu.
 - Run `setup.cmd`, then `start.cmd`.
